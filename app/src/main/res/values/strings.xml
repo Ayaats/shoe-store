@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_email">Email</string>
+    <string name="user_name">UserName</string>
+    <string name="sign_in_">LogIn</string>
+    <string name="password">Password</string>
+    <string name="prompt_password">Password</string>
+    <string name="create_Account">New Account</string>
+    <string name="sign_in">Log In</string>
+    <string name="welcome">WELCOME</string>
+    <string name="welcome_">ShoeStores.com is all about footwear. We have been in the shoe business for over 130 years.Yes,you read that correctly, over a century plus a quarter. Today we are proud to offer our best customer service to patrons both online here at ShoeStores.com and in our shoe stores in the Indianapolis, IN area.For more information about the 130+ history of Stout\'s</string>
+    <string name="welcome_text">HELLO CUSTOMERS</string>
+    <string name="instruct_txt">Finding the right shoe for your feet is always easier said than done.Considering the amount of time everyone spends in their shoes while applying all their weight on them, its undoubtedly a very important decision to make.  Also with the current marketing trends, all So it\'s .</string>
+    <string name="instruct">Instructions</string>
+    <string name="show_list">Show List</string>
+    <string name="todo">ToDo</string>
+    <string name="shoe">SHOES LIST</string>
+    <string name="log_out">LogOut</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="name">Name</string>
+    <string name="compant_n">Comany</string>
+    <string name="description">Desscription</string>
+    <string name="save">save</string>
+
+</resources>

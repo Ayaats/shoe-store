@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<!--Used Constraint Layout as its used with complex views architecture and stops any nesting between other layouts-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoeList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ShoeListPageFragment">
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sin_in_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoeList">
+           <!-- Used Linear layout here bcz this is a simple vertical layout which doesn't need complex constraints-->
+            <LinearLayout
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatActionBtn"
+            android:layout_width="63dp"
+            android:layout_height="69dp"
+            android:layout_marginBottom="28dp"
+            android:backgroundTint="@color/sin_in_back"
+            android:clickable="true"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.988"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_add"
+            tools:ignore="ImageContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

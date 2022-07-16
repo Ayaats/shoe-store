@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!--Used Constraint Layout as its used with complex views architecture and stops any nesting between other layouts-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".InstructionPageFragment">
+
+        <TextView
+            android:id="@+id/instrucrtText"
+            android:layout_width="400dp"
+            android:layout_height="459dp"
+            android:background="@color/sin_in_back"
+            android:paddingTop="50dp"
+            android:paddingBottom="50dp"
+            android:text="Finding the right shoe for your feet is always easier said than done.Considering the amount of time everyone spends in their shoes while applying all their weight on them, its undoubtedly a very important decision to make.  Also with the current marketing trends, all So it\'s "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/showList"
+            android:layout_width="232dp"
+            android:layout_height="76dp"
+            android:background="@color/btn_color"
+            android:text="@string/show_list"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instrucrtText"
+            app:layout_constraintVertical_bias="0.733" />
+
+        <TextView
+            android:id="@+id/instruction"
+            android:layout_width="196dp"
+            android:layout_height="80dp"
+            android:background="@color/welcome_text_back"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:shadowColor="@color/black"
+            android:shadowRadius="10"
+            android:text="@string/instruct"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/instrucrtText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.357" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

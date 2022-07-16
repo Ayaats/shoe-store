@@ -36,6 +36,7 @@ class ShoeDetailsPageFragment : Fragment() {
     }
 
     fun InsertShoe(shoe: Shoe){
+
         if(shoe.name.isNullOrEmpty()||shoe.company.isNullOrEmpty()||
             shoe.size.isNullOrEmpty()||shoe.description.isNullOrEmpty())
             Toast.makeText(context,"ENTER ALL DATA",Toast.LENGTH_SHORT).show()

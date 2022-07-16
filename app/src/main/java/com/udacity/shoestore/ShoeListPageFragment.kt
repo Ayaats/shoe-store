@@ -3,6 +3,7 @@ package com.udacity.shoestore
 import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.view.View.inflate
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -11,7 +12,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.udacity.shoestore.databinding.ActivityMainBinding.inflate
+import com.udacity.shoestore.databinding.FragmentInstructionPageBinding.inflate
 import com.udacity.shoestore.databinding.FragmentShoeListPageBinding
+import com.udacity.shoestore.databinding.FragmentWelcomePageBinding.inflate
+import com.udacity.shoestore.databinding.ItemBinding
 import com.udacity.shoestore.models.Shoe
 
 class ShoeListPageFragment : Fragment() {
@@ -47,22 +52,17 @@ class ShoeListPageFragment : Fragment() {
         return binding.root
     }
     private fun AddNeWShoe(shoe: Shoe) {
-        val inflat= context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflat.inflate(R.layout.item, null)
-        val name:TextView = view.findViewById(R.id.nameView)
-        val size:TextView = view.findViewById(R.id.sizeView)
-        val description:TextView = view.findViewById(R.id.decriptionView)
-        val company:TextView = view.findViewById(R.id.companyView)
 
-        name.text = shoe.name
-        size.text = shoe.size
-        description.text = shoe.description
-        company.text = shoe.company
+        val inflater= context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val i = inflater.inflate(R.layout.item, null)
+        val itemBinding = ItemBinding.inflate(LayoutInflater.from(requireContext()))
+        itemBinding.nameView.text = shoe.name
+        itemBinding.sizeView.text = shoe.size
+        itemBinding.companyView.text = shoe.company
+        itemBinding.decriptionView.text = shoe.description
 
-        LinearParent!!.addView(view)
+        LinearParent!!.addView(itemBinding.root)
 }
-
-
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)

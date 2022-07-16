@@ -8,6 +8,7 @@ import com.udacity.shoestore.models.Shoe
 
 class ShoeStoreViewModel:ViewModel() {
 
+
     private var _list= MutableLiveData<MutableList<Shoe>>()
     val list:LiveData<MutableList<Shoe>>
     get() = _list
